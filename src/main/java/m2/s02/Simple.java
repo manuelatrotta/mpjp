@@ -10,7 +10,12 @@ import java.lang.Math; // not required
  */
 public class Simple {
     public static void main(String[] args) {
-        System.out.println(Math.PI);
+    	//multiply the value by the constant PI and for E
+
+    	int numberSecond = 30;
+    	float diameter = 20.38F;
+        System.out.println(Math.PI *diameter);
+        System.out.println(Math.E * numberSecond);
     }
 }
 
