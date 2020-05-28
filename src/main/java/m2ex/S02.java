@@ -45,8 +45,8 @@ public class S02 {
      * @return the engine capacity in cm^3
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
-        // TODO
-        return 0;
+    	//Cilindrata = (alesaggio/2)2*3.1416*corsa
+    	return (Math.pow(bore / 2, 2) * Math.PI * stroke );
     }
 
     /**
@@ -56,8 +56,8 @@ public class S02 {
      * @return sum of digits
      */
     public static int digitSum(int value) {
-        // TODO
-        return 0;
+    	return 0;
+
     }
 
     /**
@@ -69,7 +69,16 @@ public class S02 {
      * @return
      */
     public static int score(double x, double y) {
-        // TODO
-        return 0;
+    	
+    	double distance = Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
+    	
+		if(distance > 0 && distance <= 1) {
+			return 10;
+		} else if(distance > 1 && distance <= 5) {
+			return 5;
+		} else if(distance > 5 && distance <= 10) {
+			return 1;
+		} else 
+			return 0;
     }
 }
