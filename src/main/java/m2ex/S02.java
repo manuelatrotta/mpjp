@@ -8,10 +8,15 @@ public class S02 {
      * @param time     in seconds
      * @return speed in meters per second
      */
-    public static double speed(double distance, double time) {
-        // TODO
-        return 0;
-    }
+		public class Speed {
+		public void main(String[] args) {
+		    float space = 23.67F;
+		    float time = 34.90F;
+		    float speed = space * time;
+		    System.out.println("Il risultato della velocità e': " + speed + "ms^2");
+		  }
+		}
+
 
     /**
      * Distance between (x0, y0) and (x1, y1)
@@ -23,8 +28,12 @@ public class S02 {
      * @return distance
      */
     public static double distance(int x0, int y0, int x1, int y1) {
-        // TODO
-        return 0;
+    	int x = 2;
+    	int y = 2;
+    	int x2 = 3;
+    	int y2 = 3;
+    	return Math.sqrt((y2 - y) * (y2 - y) + (x2 - x) * (x2 - x));
+    	
     }
 
     /**
