@@ -8,13 +8,9 @@ public class S02 {
      * @param time     in seconds
      * @return speed in meters per second
      */
-		public class Speed {
-		public void main(String[] args) {
-		    float space = 23.67F;
-		    float time = 34.90F;
-		    float speed = space * time;
-		    System.out.println("Il risultato della velocità e': " + speed + "ms^2");
-		  }
+		public static double speed(double distance, double time) {
+			double speed = distance/time;
+			return  speed;
 		}
 
 
@@ -46,7 +42,7 @@ public class S02 {
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
     	//Cilindrata = (alesaggio/2)2*3.1416*corsa
-    	return (Math.pow(bore / 2, 2) * Math.PI * stroke );
+    	return (Math.pow(bore / 2, 2) * Math.PI * stroke* nr)/1000;
     }
 
     /**
@@ -74,11 +70,11 @@ public class S02 {
     	
 		if(distance > 0 && distance <= 1) {
 			return 10;
-		} else if(distance > 1 && distance <= 5) {
+		}else if(distance > 1 && distance <= 5) {
 			return 5;
-		} else if(distance > 5 && distance <= 10) {
+		}else if(distance > 5 && distance <= 10) {
 			return 1;
-		} else 
+		}else 
 			return 0;
     }
 }
