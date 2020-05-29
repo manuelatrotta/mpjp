@@ -38,8 +38,8 @@ public class S02 {
      * @return the engine capacity in cm^3
      */
     public static double engineCapacity(double bore, double stroke, int nr) {
-    	//Cilindrata = (alesaggio/2)2*3.1416*corsa
-    	return (Math.pow(bore / 2, 2) * Math.PI * stroke* nr)/1000;
+    	//Cilindrata = (alesaggio/2)2*3.1416*corsa nr = numero di cilindri
+    	return (Math.pow(bore / 2, 2) * Math.PI * stroke* nr) * 0.001;
     }
 
     /**
@@ -49,7 +49,15 @@ public class S02 {
      * @return sum of digits
      */
     public static int digitSum(int value) {
-    	return 0;
+    	//Math.abs value absolute
+    	//input 123 output 1+2+3= 6 123%10=3 
+    	int total = 0;
+    	value = Math.abs(value);
+    	while( value !=0) {
+    		total += (value % 10);
+    		value /= 10;
+    	}
+    	return total;
 
     }
 
