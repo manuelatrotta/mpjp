@@ -46,7 +46,30 @@ public class S03 {
      */
     public static String asWord(int value) {
     	
-    	return "";
+    	int result = value;
+    	
+    	switch (result) {
+    	case 0:
+    		return "zero";
+        case 1:
+            return "one";
+        
+        case 2:
+            return "two";
+
+        case 3:
+            return "three";
+        
+        case 4:
+            return "four";
+            
+        case 5:
+            return "five";
+  
+        default:
+            return "other";
+
+        }
     }
 
     /**
