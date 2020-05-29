@@ -24,11 +24,8 @@ public class S02 {
      * @return distance
      */
     public static double distance(int x0, int y0, int x1, int y1) {
-    	int x = 2;
-    	int y = 2;
-    	int x2 = 3;
-    	int y2 = 3;
-    	return Math.sqrt((y2 - y) * (y2 - y) + (x2 - x) * (x2 - x));
+    	
+    	return Math.sqrt(Math.pow(x1 - x0, 2) + Math.pow(y1 - y0, 2));
     	
     }
 
