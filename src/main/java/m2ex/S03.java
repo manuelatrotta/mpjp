@@ -8,8 +8,15 @@ public class S03 {
      * @return "positive", "negative", or "zero"
      */
     public static String checkSign(int value) {
-        // TODO
-        return "";
+        int result = value;
+        
+        if(result == 0) {
+        	return "zero";
+        }if(result > 0) {
+        	return "positive";
+        }else {
+        	return "negative";
+        }
     }
 
     /**
