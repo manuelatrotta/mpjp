@@ -10,9 +10,12 @@ public class S05 {
 	public static String reverse(String s) {
 		
 		StringBuilder reverse = new StringBuilder();
+		
 		for (int i = s.length() - 1; i >= 0; i--) {
+			
 			reverse.append(s.charAt(i));
 		}
+		
 		return reverse.toString();
 	}
 
@@ -23,12 +26,18 @@ public class S05 {
 	 * @return true if the parameter is a palindrome
 	 */
 	public static boolean isPalindrome(String s) {
+		
 		int l=s.length();
+		
 		if (l<2) {
 		    return true;
+		    
 		}else if(!s.substring(0,1).equals(s.substring(l-1,l))) {
+			
 			return false;
+			
 		}else {
+			
 			return true;
 		}
 		
@@ -41,11 +50,20 @@ public class S05 {
 	 * @return a string, same of input but without vowels
 	 */
 	public static String removeVowels(String s) {
-		// TODO
-
-	           
-		return "";
-	}
+		//new mutable string
+		StringBuilder str = new StringBuilder();
+		//for on string s 
+		for (int i = 0; i < s.length(); i++) {
+			
+			char actual = s.charAt(i);
+			
+			if (actual == 'a' || actual == 'e' || actual == 'i' || actual == 'o' || actual == 'u') {
+				continue;
+			}
+			str.append(actual);
+		}
+		return str.toString();
+   } 
 
 	/**
 	 * Convert from binary to decimal
@@ -57,6 +75,10 @@ public class S05 {
 		// [1][0][0][0][1]
 	    // 43_210
 	    // 2
+		int val = 0;
+		for(int i =0; i<s.length(); i++) {
+			
+		}
 		return 0;
 	}
 
@@ -81,8 +103,13 @@ public class S05 {
 	 * @return the average
 	 */
 	public static double average(int[] data) {
-		// TODO
-		return 0;
+		int sum = 0;
+ 
+		for(int i=0; i<data.length; i++) {
+			sum += data[i];
+		}
+		int average = sum /data.length;
+		return average ;
 	}
 
 	/**
@@ -92,7 +119,7 @@ public class S05 {
 	 * @return the largest value
 	 */
 	public static int max(int[] data) {
-		// TODO
+		
 		return Integer.MIN_VALUE;
 	}
 }
