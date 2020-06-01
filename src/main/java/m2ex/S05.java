@@ -8,8 +8,12 @@ public class S05 {
 	 * @return the input reversed
 	 */
 	public static String reverse(String s) {
-		// TODO
-		return "";
+		
+		StringBuilder reverse = new StringBuilder();
+		for (int i = s.length() - 1; i >= 0; i--) {
+			reverse.append(s.charAt(i));
+		}
+		return reverse.toString();
 	}
 
 	/**
@@ -19,8 +23,15 @@ public class S05 {
 	 * @return true if the parameter is a palindrome
 	 */
 	public static boolean isPalindrome(String s) {
-		// TODO
-		return false;
+		int l=s.length();
+		if (l<2) {
+		    return true;
+		}else if(!s.substring(0,1).equals(s.substring(l-1,l))) {
+			return false;
+		}else {
+			return true;
+		}
+		
 	}
 
 	/**

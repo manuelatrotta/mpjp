@@ -9,7 +9,7 @@ public class S04 {
 	 * @return the sum of all the numbers, or zero
 	 */
 	public static long sum(int first, int last) {
-		// TODO
+		
 		return 0;
 	}
 
@@ -21,8 +21,9 @@ public class S04 {
 	 * @return the sum of all the even numbers, or zero
 	 */
 	public static long evenSum(int first, int last) {
-		// TODO
-		return 0;
+
+				return 0;
+
 	}
 
 	/**
