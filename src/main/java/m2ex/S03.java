@@ -1,5 +1,7 @@
 package m2ex;
 
+import java.util.Arrays;
+
 public class S03 {
     /**
      * Check if the parameter is positive, negative, or zero
@@ -12,10 +14,15 @@ public class S03 {
         int result = value;
         
         if(result == 0) {
+        	
         	return "zero";
+        	
         }if(result > 0) {	
+        	
         	return "positive";
+        	
         }else{  	
+        	
         	return "negative";
         }
     }
@@ -31,8 +38,11 @@ public class S03 {
         int number = value;
         
         if(number % 2 != 0) {     	
+        	
         	return true;
+        	
         }else {   
+        	
         	return false;
         }
         
@@ -81,8 +91,14 @@ public class S03 {
      * @return a letter in [A, F]
      */
     public static char vote(double percentile) {
-        
-        return 'F';
+    	
+    	double result = percentile / 100;
+    	
+    	if(result > 90)
+         return 'A';
+    	else {
+    	 return 'B';
+    	}
     }
 
     /**
@@ -92,8 +108,13 @@ public class S03 {
      * @return true if leap year
      */
     public static boolean isLeapYear(int year) {
-        // TODO
-        return false;
+    	
+    	int actual = year;
+    	if (actual >1584 && (actual % 400==0) ||(actual % 4 == 0 && actual % 100 !=0)) {
+    		return true;
+    	}else {
+    		return false;
+    	}
     }
 
     /**
@@ -106,9 +127,10 @@ public class S03 {
      */
     public static int[] sort(int a, int b, int c) {
         int[] result = new int[3];
-
-        // TODO
-
+        result[0] = a;
+        result[1] = b;
+        result[2] = c;
+        Arrays.sort(result);
         return result;
     }
 }
