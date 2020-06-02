@@ -1,6 +1,6 @@
 package m2ex;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 public class S03 {
     /**
@@ -92,13 +92,18 @@ public class S03 {
      */
     public static char vote(double percentile) {
     	
-    	double result = percentile / 100;
-    	
-    	if(result > 90)
-         return 'A';
-    	else {
-    	 return 'B';
-    	}
+    	if (percentile <= 50) {
+    		return 'F';
+    	}else if (percentile <= 60 && percentile >50 ) {
+    		return 'E';
+    	}else if (percentile <= 70 && percentile >60 ) {
+    		return 'D';
+    	}else if (percentile <= 80 && percentile >70 ) {
+    		return 'C';
+    	}else if (percentile <= 90 && percentile >80 ) {
+    		return 'B';
+    	}else 
+    		return 'A';
     }
 
     /**
@@ -127,10 +132,48 @@ public class S03 {
      */
     public static int[] sort(int a, int b, int c) {
         int[] result = new int[3];
-        result[0] = a;
-        result[1] = b;
-        result[2] = c;
-        Arrays.sort(result);
-        return result;
+        
+        if(a < b && a < c) {
+        	
+         	result[0] = a;
+         	
+         	if(b < c) {
+         		
+         		result[1] = b;
+         		result[2] = c;
+         	} else {
+         		
+         		result[1] = c;
+         		result[2] = b;
+         	}
+         }
+         if(b < c && b < a) {
+        	 
+         	result[0] = b;
+         	if(a < c) {
+         		
+         		result[1] = a;
+         		result[2] = b;
+         	} else {
+         		
+         		result[1] = b;
+         		result[2] = c;
+         	}
+         }
+         if(c < a && c < b) {
+         	result[0] = c;
+         	if(a < b) {
+         		
+         		result[1] = a;
+         		result[2] = b;
+         	} else {
+         		
+         		result[1] = b;
+         		result[2] = a;
+         	}
+         }
+         return result;
     }
 }
+
+
