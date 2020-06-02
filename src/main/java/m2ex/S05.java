@@ -75,11 +75,14 @@ public class S05 {
 		// [1][0][0][0][1]
 	    // 43_210
 	    // 2
-		int val = 0;
-		for(int i =0; i<s.length(); i++) {
-			
+		int result = 0;
+		for (int i = 0; i < s.length(); i++) {
+			char actual = s.charAt(i);
+			if (actual == '1') {
+				result += (Math.pow(2, i));
+			}
 		}
-		return 0;
+		return result;
 	}
 
 	/**
@@ -89,12 +92,15 @@ public class S05 {
 	 * @return a new array holding the same elements of input, in reversed order
 	 */
 	public static int[] reverse(int[] data) {
-		int[] result = new int[0];
+	
+		for (int i = 0; i < data.length; i++) {
+			data[i] = data[data.length-1- i];
+		}
 
-		// TODO
-
-		return result;
+		return data;
 	}
+
+	
 
 	/**
 	 * Calculate the average
@@ -120,6 +126,12 @@ public class S05 {
 	 */
 	public static int max(int[] data) {
 		
-		return Integer.MIN_VALUE;
+		int max = data[0];
+		for (int i = 0; i < data.length; i++) {
+			if(data[i] > max) {
+				max = data[i];
+			}
+		}
+		return max;
 	}
 }
