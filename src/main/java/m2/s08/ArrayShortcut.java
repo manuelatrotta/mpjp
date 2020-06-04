@@ -8,5 +8,6 @@ public class ArrayShortcut {
         System.out.println(array[array.length-1]);
         
         System.out.println(array.length); // 3
+        
     }
 }

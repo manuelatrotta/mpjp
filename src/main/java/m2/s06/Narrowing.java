@@ -2,6 +2,7 @@ package m2.s06;
 
 public class Narrowing {
     public static void main(String[] args) {
+    	//widening
         double d = 42;
         float f = (float)d;
         long l = (long)f;
